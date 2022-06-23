@@ -1,0 +1,23 @@
+@mixin font($font_name, $file_name, $weight, $style: normal) {
+  @font-face {
+    font-family: "#{$font_name}";
+    font-weight: #{$weight};
+    font-style: #{$style};
+    font-display: swap;
+    src: url("~/assets/fonts/#{$file_name}.woff") format("woff");
+  }
+
+  // @include font("Mont", "Mont-Medium", 500);
+}
+
+@include font("Inter", "Inter-Regular", 400);
+@include font("Inter", "Inter-Medium", 500);
+@include font("Inter", "Inter-SemiBold", 600);
+@include font("Inter", "Inter-Bold", 700);
+@include font("Inter", "Inter-ExtraBold", 800);
+@include font("Inter", "Inter-Black", 900);
+@include font("Mont", "Mont-Black", 900);
+@include font("Mont", "Mont-Bold", 700);
+@include font("Mont", "Mont-Heavy", 800);
+@include font("Mont", "Mont-SemiBold", 600);
+@include font("Mont", "Mont-Regular", 400);
