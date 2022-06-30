@@ -5,7 +5,7 @@
     <img class="success__icon mb-[24px] mx-auto" src="@/assets/images/success.png" alt="check icon">
 
     <h3 class="mx-auto max-w-[508px] w-full uppercase mb-[39px] text-[#1F1F1F] mont font-800 sm:text-[24px] sm:leading-[31px] text-[16px] leading-[20px]">
-      Sizning izohingiz qabul qilindi, tez orada siz bilan boglanamiz‘
+      Sizning izohingiz qabul qilindi, tez orada siz bilan boglanamiz
     </h3>
 
 <!-- TODO:home ga otmayapti -->
