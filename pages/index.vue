@@ -11,6 +11,7 @@
   <JoinBot />
   <AdminPanel />
   <Contact />
+
 </div>
 </template>
 
@@ -24,6 +25,7 @@ import JoinBot from '@/components/blocks/JoinBot.vue'
 import AdminPanel from '@/components/blocks/AdminPanel.vue'
 import Contact from '@/components/blocks/Contact.vue'
 
+
 import 'aos/dist/aos.css'
 export default {
   components: {
@@ -33,7 +35,8 @@ export default {
     CTA,
     JoinBot,
     AdminPanel,
-    Contact
+    Contact,
+
   },
   mounted() {
     AOS.init()

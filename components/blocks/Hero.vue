@@ -1,5 +1,5 @@
 <template>
-  <div class="hero overflow-hidden">
+  <div class="hero z-0 overflow-hidden">
     <div class="container">
       <div class="hero__inner flex justify-between pt-[146rem] gap-[46px]">
         <div class="hero__info max-w-[516px]">

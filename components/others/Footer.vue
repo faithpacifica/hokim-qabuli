@@ -25,7 +25,7 @@
           <li>
             <nuxt-link
               class="mont font-semibold text-[14px] leading-[18px] transition hover:opacity-80 active:opacity-60"
-              to="localePath('/')"
+              to="/ "
             >
               Ilovalar haqida
             </nuxt-link>

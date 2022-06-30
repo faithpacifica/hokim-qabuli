@@ -69,8 +69,8 @@ export default {}
     linear-gradient(278.38deg, #07264e 9.57%, #1958a8 100%);
   border: 2px solid rgba(14, 59, 118, 0.16);
   box-shadow: 0px 16px 44px rgba(14, 59, 118, 0.16);
-  background-size: cover;
-  background-position: left -50px top -30px, center;
+  background-size: initial;
+  background-position: left -47px top -29px, center;
   background-repeat: no-repeat;
 
   @media screen and (min-width: 370px) and (max-width: 1130px) {
