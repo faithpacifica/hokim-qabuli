@@ -9,7 +9,7 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      alias: [['~', './']],
+      alias: [['~','@', './']],
     },
   },
   extends: [

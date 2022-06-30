@@ -36,6 +36,8 @@ body {
   font-style: normal;
   font-size: 16px;
   color: white;
+  background-color:#E7EBEE;
+  font-family: Mont, Inter, sans-serif !important;
 }
 
 .mont {
@@ -90,4 +92,53 @@ body {
   &:hover {
     transition: all 0.3s;
   }
+}
+.blue-header {
+  .language-options-box {
+    transition: 0.4s ease;
+    &:hover {
+      & .language-dropdown__span {
+        transition: 0.2s ease;
+        color: white !important;
+        opacity: 0.8;
+      }
+      & .lang-arrow {
+        transition: 0.3s ease;
+        svg {
+          transition: 0.2s ease;
+          path {
+            transition: 0.2s ease;
+            stroke: white;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.language-options-box {
+  transition: 0.4s ease;
+  &:hover {
+    & .language-dropdown__span {
+      transition: 0.3s ease;
+      color: #033473 !important;
+    }
+    & .lang-arrow {
+      transition: 0.3s ease;
+      svg {
+        transition: 0.3s ease;
+        path {
+          transition: 0.3s ease;
+          stroke: #033473;
+        }
+      }
+    }
+  }
+}
+
+// ERROR MESSAGE
+
+._error{
+  outline: 1.5px solid  #FF5757;
 }

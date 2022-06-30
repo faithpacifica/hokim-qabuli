@@ -16,14 +16,22 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/style/style.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '@/plugins/vClickOutside', ssr: false }],
+  plugins: [
+    { src: '@/plugins/vClickOutside', ssr: false },
+    {
+      src: '~/plugins/vuelidate', ssr: false ,
+    },
+    {
+      src: '@/plugins/vmask',
+    },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
