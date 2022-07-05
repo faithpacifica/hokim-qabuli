@@ -1,31 +1,95 @@
 <template>
-<div class="language-dropdown w-[140px] z-30">
-  <div class="flex-center gap-[4rem] relative language-options-box group justify-end">
-    <div class="flex-center gap-[4rem] cursor-pointer z-20 " @click="showLang = !showLang">
-      <span class=" language-dropdown__span mr-[4px] text-white text-[14px] inter leading-[17rem] z-20">{{ currentLang }}</span>
-      <Icon name="lang_arrow" class="lang-arrow w-[20px] h-[20px]  ease-in-out duration-500" :class="{ 'rotate-180': showLang }" />
-    </div>
+  <div class="language-dropdown w-[140px] z-30">
+    <div
+      class="
+        flex-center
+        gap-[4rem]
+        relative
+        language-options-box
+        group
+        justify-end
+      "
+    >
+      <div
+        class="flex-center gap-[4rem] cursor-pointer z-20"
+        @click="showLang = !showLang"
+      >
+        <span
+          class="
+            language-dropdown__span
+            mr-[4px]
+            text-white text-[14px]
+            inter
+            leading-[17rem]
+            z-20
+          "
+          >{{ currentLang }}</span
+        >
+        <Icon
+          name="lang_arrow"
+          class="lang-arrow w-[20px] h-[20px] ease-in-out duration-500"
+          :class="{ 'rotate-180': showLang }"
+        />
+      </div>
 
-    <transition name="lang">
-      <div v-if="showLang" v-click-outside="externalClick" class="language-options transition-all duration-500 absolute top-[24px] w-[120px] z-20">
-        <div class="language-options-window rounded-[4px] overflow-hidden">
-          <div v-for="(item, index) in langs" :key="index" class="whitespace-nowrap flex-center" :class="{ 'lang-active': showLang }">
-            <!-- TODO:text, bg hover, active,backdrop lani tekshirish -->
-            <span class="language-span w-full bg-[#0E3B76] hover:bg-[#6280A6] cursor-pointer transition duration-500 flex justify-start pl-[12px] py-[10px] inter text-[#ffffff80] hover:text-[#fff] active:text-white text-[14px] leading-[17px] backdrop-filter backdrop-blur-[44px]" :class="{
-                        'border-b-[0px]': index === langs.length - 1,
-                      }" @click="
-                        _i18n.setLocale(`${item.short}`)
-                        showLang = false
-                      ">
-              {{ item.title }}
-              <Icon class="click-icon ml-[11px] opacity-0 " name="click_icon" />
-            </span>
+      <transition name="lang">
+        <div
+          v-if="showLang"
+          v-click-outside="externalClick"
+          class="
+            language-options
+            transition-all
+            duration-500
+            absolute
+            top-[24px]
+            w-[120px]
+            z-20
+          "
+        >
+          <div class="language-options-window rounded-[4px] overflow-hidden">
+              <span
+              v-for="(item, index) in langs"
+              :key="index"
+              :class="[{ 'lang-active': showLang }, index === 0 ? '!border-t-[0px]': '', index === 2 ? '!border-b-[0px]': '']"
+                class="
+                  language-span
+                  w-full
+                  bg-[#0E3B76]
+                  hover:bg-[#6280A6]
+                  cursor-pointer
+                  transition
+                  duration-500
+                  flex
+                  justify-start
+                  pl-[12px]
+                  py-[10px]
+                  inter
+                  text-[#ffffff80]
+                  hover:text-[#fff]
+                  active:text-white
+                  text-[14px]
+                  leading-[17px]
+                  backdrop-filter backdrop-blur-[44px]
+                "
+
+                @click="
+                  _i18n.setLocale(`${item.short}`)
+                  showLang = false
+                  checkedIcon = true
+                "
+              >
+                {{ item.title }}
+                <Icon
+                  v-if="$i18n.locale === item.short"
+                  class="click-icon ml-[11px]"
+                  name="click_icon"
+                />
+              </span>
           </div>
         </div>
-      </div>
-    </transition>
+      </transition>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -38,18 +102,20 @@ export default {
     return {
       showLang: false,
       language: false,
-      langs: [{
+      checkedIcon: false,
+      langs: [
+        {
           title: 'English',
           icon: 'english',
           short: 'en',
         },
         {
-          title: 'Russian',
+          title: 'Русский',
           icon: 'russia',
           short: 'ru',
         },
         {
-          title: 'Uzbek',
+          title: "O'zbekcha",
           icon: 'uzbek',
           short: 'uz',
         },
@@ -99,14 +165,22 @@ export default {
   opacity: 1;
 }
 
-.language-span {
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
 
-  &:hover {
-    border-top: 1px solid #EBEEF5;
-    border-bottom: 1px solid #EBEEF5;
-  }
+.language-span {
+  border-top: 1px solid #0E3B76;
+  border-bottom: 1px solid #0E3B76;
+}
+.language-span:hover:nth-child(1) {
+  border-bottom: 1px solid #EBEEF5;
+}
+
+.language-span:hover:nth-child(2) {
+  border-top: 1px solid #EBEEF5;
+  border-bottom: 1px solid #EBEEF5;
+}
+
+.language-span:hover:nth-child(3) {
+  border-top: 1px solid #EBEEF5;
 }
 
 @keyframes lang {
@@ -121,45 +195,4 @@ export default {
   }
 }
 
-//  .language-options-box {
-//     transition: 0.4s ease;
-//     &:hover {
-//       & .language-dropdown__span {
-//         transition: 0.2s ease;
-//         color: white !important;
-//         opacity: 0.8;
-//       }
-//       & .lang-arrow {
-//         transition: 0.3s ease;
-//         svg {
-//           transition: 0.2s ease;
-//           path {
-//             transition: 0.2s ease;
-//             stroke: white;
-//             opacity: 0.8;
-//           }
-//         }
-//       }
-//     }
-//   }
-
-// .language-options-box:hover {
-//   transition: 0.4s ease;
-
-// .language-dropdown__span {
-//     transition: 0.2s ease;
-//     color: #033473;
-//   }
-// i {
-//     transition: 0.3s ease;
-//     svg {
-//       transition: 0.2s ease;
-//       path {
-//         transition: 0.2s ease;
-//         stroke: #033473 !important;
-//         fill: green;
-//       }
-//     }
-//   }
-// }
 </style>

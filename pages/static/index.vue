@@ -15,70 +15,15 @@
           <Icon class=" blue-logo block max-w-[211px] w-full h-[33px] text-center mb-[32px] mx-auto" name="blue_logo" />
         </nuxt-link>
 
-        <SectionTitle class="mont font-800 mb-[12px] text-[#121E22] sm:text-[32px] text-[20px]  sm:leading-[42px] leading-[26px0]" :title="'Bu 1-sarlavhaning namoyishi'" />
+        <SectionTitle class="mont font-800 mb-[12px] text-[#121E22] sm:text-[32px] text-[20px]  sm:leading-[42px] leading-[26px0]" 
+        :title="$t('static_page.main_title')" />
         <h5 class="sm:mb-[32px] mb-[13px] mont font-800 text-[#121E22] sm:text-[24px] sm:leading-[31px]  text-[16px] leading-[21px]">
-          Va 2-sarlavha shunday ko'rinishga ega bo'ladi
+            {{ $t('static_page.title') }}
         </h5>
 
         <p class="mont font-medium sm:text-[18rem] sm:leading-[23rem] text-[14px] leading-[18px] text-[#121E22] text-justify mb-[32px]">
-          1. Ushbu Nizom “Mahalliy davlat hokimiyati to’g’risida”gi
-          O’zbekiston Respublikasi Qonuniga va O’zbekiston Respublikasi
-          Prezidentining 2016 yil 22 dekabrdagi “Mahalliy ijroiya hokimiyati
-          organlari faoliyatini yanada takomillashtirish to’g’risida”gi
-          PQ-2691-sonli qaroriga muvofiq tuman hokimligi boshqaruv
-          apparatining (keyingi o’rinlarda boshqaruv apparati deb ataladi)
-          vazifalari, funksiyalari, huquqlari, mas’uliyatini hamda faoliyatini
-          tashkil etish tartibini belgilaydi. 2. Boshqaruv apparati o’z
-          faoliyatida O’zbekiston Respublikasi Konstitutsiyasiga, “Mahalliy
-          davlat hokimiyati to’g’risida”gi O’zbekiston Respublikasi Qonuniga
-          va boshqa qonunlarga, O’zbekiston Respublikasi Oliy Majlisi
-          palatalarining qarorlariga, O’zbekiston Respublikasi Prezidentining
-          farmon, qaror va farmoyishlariga, Vazirlar Mahkamasi va viloyat
-          hokimining qaror va farmoyishlariga, boshqa qonun hujjatlariga, xalq
-          deputatlari tuman Kengashi va hokimning hujjatlariga, shuningdek
-          ushbu Nizomga amal qiladi. 3. Boshqaruv apparati hokimlik
-          faoliyatini axborot-tahliliy, huquqiy, tashkiliy-texnik va
-          moliyaviy-xo’jalik jihatidan ta’minlaydi, xalq deputatlari tuman
-          Kengashi majlislarini uning reglamentiga muvofiq tayyorlaydi, xalq
-          deputatlari tuman Kengashi va hokimning hujjatlari loyihalarini
-          tayyorlaydi, ularni amalga oshirish yuzasidan amaliy
-          chora-tadbirlarni ishlab chiqadi va ijroni muntazam ravishda
-          tekshiradi. Boshqaruv apparati xalq deputatlari tuman Kengashi
-          faoliyatiga tashkiliy, texnik va boshqa xizmatlar ko’rsatilishini
-          ta’minlaydi. 4. Boshqaruv apparati o’z faoliyatini hokimning
-          rahbarligida amalga oshiradi. 5. Boshqaruv apparati o’ziga yuklangan
-          vazifalar va funksiyalarni bajarishda O’zbekiston Respublikasi Oliy
-          Majlisining palatalari, O’zbekiston Respublikasi Prezidenti
-          Devonining tegishli xizmatlari, O’zbekiston Respublikasi Vazirlar
-          Mahkamasi, viloyat hokimligi, shuningdek davlatning boshqa organlari
-          hamda boshqa tashkilotlar bilan o’zaro hamkorlik qiladi. Quyidagilar
-          boshqaruv apparatining vazifalari hisoblanadi: hokimning O’zbekiston
-          Respublikasi Konstitutsiyasi, “Mahalliy davlat hokimiyati
-          to’g’risida”gi O’zbekiston Respublikasi Qonuni va boshqa qonunlar,
-          O’zbekiston Respublikasi Prezidentining farmon, qaror va
-          farmoyishlarida, Vazirlar Mahkamasi xamda viloyat hokimining qaror
-          va farmoyishlarida belgilangan vakolatlari amalga oshirilishini
-          davlat organlari va boshqa tashkilotlar bilan birgalikda ta’minlash;
-          tumanni ijtimoiy-iqtisodiy rivojlantirish tendensiyalarini kompleks
-          tahlil qilish, asosiy iqtisodiy ko’rsatkichlar dinamikasi, tarkibiy
-          va institutsional o’zgartirishlar, mahalliy byudjetlar ijrosining
-          tizimli monitoringini olib borish; O’zbekiston Respublikasi
-          Prezidenti tomonidan belgilanadigan eng muhim ustuvor vazifalarga
-          muvofiq tumanni kompleks rivojlantirish bo’yicha takliflar ishlab
-          chiqish. Quyidagilar boshqaruv apparatining vazifalari hisoblanadi:
-          hokimning O’zbekiston Respublikasi Konstitutsiyasi, “Mahalliy davlat
-          hokimiyati to’g’risida”gi O’zbekiston Respublikasi Qonuni va boshqa
-          qonunlar, O’zbekiston Respublikasi Prezidentining farmon, qaror va
-          farmoyishlarida, Vazirlar Mahkamasi xamda viloyat hokimining qaror
-          va farmoyishlarida belgilangan vakolatlari amalga oshirilishini
-          davlat organlari va boshqa tashkilotlar bilan birgalikda ta’minlash;
-          tumanni ijtimoiy-iqtisodiy rivojlantirish tendensiyalarini kompleks
-          tahlil qilish, asosiy iqtisodiy ko’rsatkichlar dinamikasi, tarkibiy
-          va institutsional o’zgartirishlar, mahalliy byudjetlar ijrosining
-          tizimli monitoringini olib borish;
+         {{ $t('static_page.text') }}
         </p>
-
-        <!-- TODO:COPY ni olib kelish -->
 
         <div class="socials-link flex items-center justify-between ml-auto py-[8px] pl-[12px] pr-[4px] w-[280px] bg-[#F2F5F9] backdrop-blur-[44px] rounded-[6px]">
           <div v-if="windowLocation" class="mr-[11px] ">
@@ -88,10 +33,13 @@
           </div>
 
           <button @click="copyUrl()" class="rounded-[6px] relative transition duration-500  copy-button  p-[6px] bg-[#0E3B76] ">
-           <Icon  class="w-[16px] h-[16]" name="copy"/>
+           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.21213 2.87988H0.639648V15.3599H10.2396V6.9074L6.21213 2.87988ZM6.07965 3.65236L9.46717 7.03988H6.07965V3.65236Z" fill="white"/>
+          <path d="M11.3322 0.640015H5.75977V2.24001H6.21225H6.47721L6.66473 2.42753L10.6922 6.45505L10.8798 6.64257V6.90753V13.12H15.3598V4.66753L11.3322 0.640015ZM11.1998 4.80001V1.41249L14.5873 4.80001H11.1998Z" fill="white"/>
+          </svg>
+
             <div v-if="copied" class="tooltip-customed absolute bg-[#121E22]  p-[4px] ease-linear transition duration-500  text-[12px] rounded-[4px] text-white  top-[-45px] right-0">
-              Nusxalandi
-              <!-- {{ $t('copied')}} -->
+              {{ $t('static_page.copied') }}
             </div>
           </button>
         </div>
@@ -115,10 +63,9 @@ export default {
   data() {
     return {
       breadcrumb: [{
-        title: 'Foydalanish qoidalari',
-        link: '/static'
+        title:  this.$t('breadcrumb.rules'),
       }],
-            windowLocation: '',
+       windowLocation: '',
       copied: false,
     }
   },

@@ -3,25 +3,23 @@
   <div class="container h-[452px] overflow-hidden rounded-[16px]">
     <div class="cta__inner rounded-[16px] pt-[98px] pr-[67px]">
       <div class="cta__wrapper flex justify-end gap-[34px] top-[98rem] ml-auto">
-        <img class="cta__phone max-w-[222px] w-full max-h-[464px] h-full" src="@/assets/images/cta-phone.png" alt="iphone" />
+        <img class="cta__phone w-[230px] max-h-[464px] h-full" src="@/assets/images/cta-phone.png" alt="iphone" />
 
         <div class="cta__info flex flex-col justify-start max-w-[592px] w-full">
           <h3 class="mb-[8px] inter font-semibold text-[36rem] leading-[50rem] tracking-[0.02] relative">
-            Hokimga murojaat qilish yoki qabulga yozilish tizimi mobil ilovasi
-            <span class="title-line absolute top-[38px] left-0"><img src="@/assets/images/cta-vector.png" alt="blue-line"></span>
+             {{ $t('cta.title') }}
+            <span class="title-line absolute top-[40px] left-0"><img src="@/assets/images/cta-vector.png" alt="blue-line"></span>
           </h3>
 
           <p class="mb-[24px] inter text-[18px] text-[#ffffffbf] leading-[28px]">
-            Murojaatlar, qabulga yozilish qulayligini yaxshilash va
-            kengaytirish uchun mobil versiyadan foydalaning.Bizni mobil
-            qurilmangizga Play Market yoki App Store orqali yuklab oling.
+             {{ $t('cta.text') }}
           </p>
 
           <div class="cta__boxes flex gap-[16px]">
 
             <a href="/" target="_blank" class="ios__btn relative">
-              <div class="store-btn">
-                <img src="@/assets/images/icon-play.png" alt="" />
+              <div class="store-btn w-[135px] h-[40px]  transition duration-300">
+                <img class="w-full" src="@/assets/images/icon-play.png" alt="" />
               </div>
               <div class="android__hover  transition duration-500 ease-in-out">
                 <img src="@/assets/images/ios-img.png" alt="" />
@@ -29,8 +27,8 @@
             </a>
 
             <a href="/" target="_blank" class="android__btn relative">
-              <div class="store-btn transition duration-300">
-                <img src="@/assets/images/icon-apple.png" alt="" />
+              <div class="store-btn transition duration-300  w-[135px] h-[40px]">
+                <img  class="w-full" src="@/assets/images/icon-apple.png" alt="" />
               </div>
               <div class="android__hover transition duration-500 ease-in-out">
                 <img src="@/assets/images/android-img.png" alt="" />
@@ -52,22 +50,27 @@ export default {}
 .cta {
   background-image: url(@/assets/images/cta-plus.png);
   background-repeat: no-repeat;
-  background-position: right 4% bottom 15%;
+  background-size: 153px 166px;
+  background-position: right 3% bottom 15%;
   @media screen and (min-width: 370px) and (max-width: 960px){
     padding: 32px 0 108px !important;
-    background-position: right 4% bottom 8%;
+    background-position: right 0% bottom 8%;
+    // TODO:margin berganim hisobiga pluslari kurinmayapti
+    margin-left: 16px;
+    margin-right: 16px;
     .container{
-      height: 570px;
+      height: 530px;
       border-radius:16px;
+      padding: 0;
     }
   }
 }
 
 .cta__inner {
-  // TODO:border,tel height ?
+
   background-image: url(@/assets/images/cta-bg.png),
     linear-gradient(278.38deg, #07264e 9.57%, #1958a8 100%);
-  border: 2px solid rgba(14, 59, 118, 0.16);
+  border: 1px solid rgba(14, 59, 118, 0.16);
   box-shadow: 0px 16px 44px rgba(14, 59, 118, 0.16);
   background-size: initial;
   background-position: left -47px top -29px, center;
@@ -79,6 +82,7 @@ export default {}
   }
    @media screen and (min-width: 370px) and (max-width: 960px){
     padding: 16px 16px 0;
+    border-radius:16px;
    }
 }
 
@@ -142,11 +146,17 @@ export default {}
     }
   }
 }
-.cta__phone{
-  width: 184px;
-  height: 385px;
-}
+
 .cta__boxes{
   margin-bottom: 32px;
+}
+
+@media screen and (min-width: 370px) and (max-width: 500px) {
+.cta__phone{
+  width: 190px;
+}
+.cta .container{
+  height: 500px;
+}
 }
 </style>

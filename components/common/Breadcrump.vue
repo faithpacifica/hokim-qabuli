@@ -34,7 +34,7 @@ export default {
   computed: {
     breads() {
       return [{
-        title: 'Bosh sahifa',
+        title: this.$t('breadcrumb.home'),
         link: "/"
       }, ...this.navs];
     },

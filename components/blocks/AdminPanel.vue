@@ -4,29 +4,27 @@
     <div class="admin-panel__inner rounded-[16px] pt-[29rem] pl-[52rem] pr-[36rem] flex gap-[16px] bg-[#285EA4]">
       <div class="admin-panel__info flex flex-col justify-start pt-[20px]">
         <h3 class="admin-panel__title uppercase mb-[8px] inter font-semibold text-[36rem] leading-[50rem] tracking-[0.02]">
-          Admin panel
+           {{ $t('admin.title') }}
         </h3>
 
         <p class="admin-panel__text mb-[66rem] mont font-semibold text-[20px] leading-[26px] opacity-75">
-          Botda admin paneli mavjud bo’lib hokimlar, hokim o’rinbosarlari,
-          moderatorlar o’z shaxsiy kabinetiga ega bo’lib, kelib tushgan
-          murojaatlar statusini belgilab, bot orqali fuqaroga javob
-          yo’llaydilar.
+           {{ $t('admin.text') }}
         </p>
 
         <ButtonIcon class="admin-button" v-bind="{
-              text: 'hokimqabul.uz',
+              text: 'hokimqabuli.uz',
               customBgClass: 'bg-[#ffffff1f]',
               customFontClass: 'font-semibold',
             }" />
       </div>
 
       <img class="admin-panel__image max-w-[483rem] w-full max-h-[407rem] h-full" src="@/assets/images/imac.png" alt="iphone" />
-
+<!-- TODO:link bir ishlab bir ishlamayapti -->
        <ButtonIcon
             class="admin-button__mobile"
             v-bind="{
-              text: 'hokimqabul.uz',
+              link:'https://toshvil.uz/',
+              text: 'hokimqabuli.uz',
               customBgClass: 'bg-[#ffffff1f]',
               customFontClass: 'font-semibold',
             }"

@@ -1,5 +1,5 @@
 <template>
-<nuxt-link to="/" class="
+<a :href="(link)" class="
       cursor-pointer
       flex
       gap-[13rem]
@@ -14,18 +14,21 @@
       w-[264px]
 
     "
+     target="_blank"
     :class="customBgClass"
     >
   <Icon :name="iconName" />
-  <span class="md:text-[20px] mont text-[15px] textFontWeight hover:text-white leading-[26px] text-center opacity-80" :class="customFontClass">{{ text }}
+  <span class="md:text-[20px] mont text-[15px] textFontWeight hover:text-white leading-[26px] text-center opacity-80" :class="customFontClass">
+  {{ text }}
   </span>
-</nuxt-link>
+</a>
 </template>
 
 <script>
 export default {
   props: {
     text: String,
+    link: String,
     iconName: String,
     customStyle: String,
     customBgClass: String,

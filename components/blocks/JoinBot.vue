@@ -5,22 +5,21 @@
       <div class="join-bot__inner  flex gap-[83rem]">
 
         <div class="iphone-wrapper relative w-[443px] ">
-          <!-- <div class="iphone-wrapper__inner relative z-30 "></div> -->
           <img data-aos="zoom-in-up" data-aos-duration="700" data-aos-easing="easy-in-out" class="iphone w-full absolute bottom-0 -top-[127px]" src="@/assets/images/iphone-big.png" alt="iphone" />
         </div>
 
         <div class="join-bot__info flex flex-col ml-auto pt-[44px] pb-[50px]  max-w-[677px] w-full">
           <h3 class="mb-[8px] inter font-semibold text-[36rem] leading-[50rem] tracking-[0.02]">
-            HokimQabuli Telegram botiga qo'shilishga tayyormisiz?
+              {{ $t('cta.title') }}
           </h3>
-          <!-- TODO:font-medium surash -->
+    
           <p class="mb-[24px] inter font-medium text-[20px] leading-[24px]">
-            Murojaat qilish, qabulga yozilish qulayligini yaxshilash uchun
-            Telegram botdan foydalaning. Bizga telegram bot orqali murojaat
-            qiling va qabulga yoziling
+              {{ $t('cta.text') }}
           </p>
 
-          <ButtonIcon class="bot-button" v-bind="{
+          <ButtonIcon class="bot-button"
+           v-bind="{
+                link:'https://t.me/hokimqabulibot',
                 text: '@HokimQabulBot',
                 iconName: 'telegram_icon',
                 customBgClass: 'bg-[#ffffff1f]',
@@ -29,7 +28,6 @@
         </div>
       </div>
     </div>
-    <!-- TODO:kontainer ga TELEGRAM imgda quyish -->
   </div>
 </div>
 </template>
@@ -164,7 +162,14 @@ export default {
     box-shadow: 0px 16px 44px rgba(14, 59, 118, 0.16);
     border-radius: 16px;
     padding: 170px 16px 0;
+      background-image:
+    url(@/assets/images/telegram.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   }
+
+
 
   .join-bot {
     background-color: #E7EBEE;

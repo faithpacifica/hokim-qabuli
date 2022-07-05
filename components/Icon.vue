@@ -1,6 +1,7 @@
 <template>
   <i v-if="src" class="icon" v-html="src" />
 </template>
+
 <script>
 /* eslint-disable vue/return-in-computed-property */
 import icons from '~/assets/helpers/icons.js'

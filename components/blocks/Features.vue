@@ -4,15 +4,15 @@
       <h3
         class="features__title mb-[2px] text-center mont font-bold text-[32rem] leading-[41rem]"
       >
-        Ilova va bot umumiy ko‘rinishi
+      {{$t('features.title_main')}}
       </h3>
       <p
         class="features__text mb-[44rem] text-center mont font-semibold text-[20rem] leading-[26rem] opacity-50"
       >
-        Ushbu ilova va bot orqali o'zingizni qiziqtirayotgan masala bo'yicha yechim topishingiz mumkin.
+        {{$t('features.text_main')}}
       </p>
 
-      <div class="features__card-wrapper flex gap-[28rem]">
+      <div data-aos="zoom-in-up" data-aos-duration="700" data-aos-easing="easy-in-out"  class="features__card-wrapper flex gap-[28rem]">
         <!-- text: $t('statistics.revenue') -->
         <FeatureCard
           v-for="(item, index) in features"
@@ -39,23 +39,23 @@ export default {
       features: [
         {
           name: 'edit_message',
-          title: 'Murojaat qilish',
-          text: "O'zingizga kerakli bo'lgan qismni topishingiz uchun qulay qilib ishlangan",
+          title:this.$t('features.data_title_one'),
+          text:this.$t('features.data_text_one'),
         },
         {
           name: 'doc_writing',
-          title: 'Qabulga yozilish',
-          text: 'Yoqimli ekanligini yanada yaxshiroq his qilasiz (qiling)',
+          title: this.$t('features.data_title_two'),
+          text:this.$t('features.data_text_two') ,
         },
         {
           name: 'config_message',
-          title: 'Oson sozlash',
-          text: "Murakkab bo'lmagan sozlash panelida o'zingizga moslash imkoniyati",
+          title: this.$t('features.data_title_three'),
+          text: this.$t('features.data_text_three'),
         },
         {
           name: 'security',
-          title: "Qo'llab-quvvatlash",
-          text: 'Malakali xodimlar tomonidan doimiy savollaringizga javoblar olish imkoniyati',
+          title: this.$t('features.data_title_four'),
+          text:this.$t('features.data_text_four') ,
         },
       ],
     }

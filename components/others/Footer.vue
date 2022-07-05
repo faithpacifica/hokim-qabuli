@@ -14,12 +14,11 @@
 
         <ul class="footer__links flex gap-[48rem]">
           <li>
-            <!-- TODO:hoverlani surash , linklar-->
             <nuxt-link
               class="mont font-semibold text-[14px] leading-[18px] transition hover:opacity-80 active:opacity-60"
               to="/"
             >
-              Biz haqimizda
+              {{ $t('footer.link_one')}} 
             </nuxt-link>
           </li>
           <li>
@@ -27,7 +26,7 @@
               class="mont font-semibold text-[14px] leading-[18px] transition hover:opacity-80 active:opacity-60"
               to="/ "
             >
-              Ilovalar haqida
+               {{ $t('footer.link_two')}} 
             </nuxt-link>
           </li>
 
@@ -36,7 +35,7 @@
               class="mont font-semibold text-[14px] leading-[18px] transition hover:opacity-80 active:opacity-60"
               to="/static"
             >
-              Foydalanish qoidalari
+               {{ $t('footer.link_three')}} 
             </nuxt-link>
           </li>
         </ul>
@@ -48,13 +47,13 @@
         <p
           class="reserved mont font-semibold text-[14px] leading-[18px] text-[#8A96B1]"
         >
-          © <span>Barcha huquqlar himoyalangan </span>2021-2022
-          <!-- {{ $t('footer.all_rights')}} -->
+          © <span>  {{ $t('footer.rights_reserved')}} </span>2021-2022
+        
         </p>
 
         <div class="footer-socials w-[205px] flex items-center justify-end">
           <div class="socials_wrapper  flex gap-[12rem] mr-[8rem]">
-            <!-- TODO:tooltip is not working -->
+    
             <a
               class="socials__link block relative w-[28px] h-[28px] transition duration-500 ease"
               href="https://www.telegram.org/"
@@ -157,8 +156,7 @@
             <p
               class="mr-[8rem] mont font-semibold text-[#9FAAC1] text-[16px] leading-[21px] min-w-[140px] opacity-50"
             >
-              <!-- {{ $t('footer.created_by') }} -->
-              Сайт разработан компанией:
+                {{ $t('footer.created')}}:
             </p>
             <Icon
               class="uic-icon w-[44px] h-[23px] transition duration-300 ease-in-out"
@@ -241,7 +239,7 @@ export default {
     height: 25px;
     position: absolute;
     top: -35px;
-    left: 0;
+    left: -20px;
     opacity: 0;
     background-color: #1f1f1f;
     font-size: 12px;
@@ -252,6 +250,9 @@ export default {
     align-items: center;
     color: white;
     z-index: 100;
+    @media screen and (min-width: 370px) and (max-width: 640px){
+      display:none;
+    }
     &::before {
       position: absolute;
       content: '';
@@ -259,7 +260,7 @@ export default {
       height: 10px;
       width: 10px;
       bottom: -5px;
-      left: 25%;
+      left: 47%;
       transform: translateX(-50%) rotate(45deg);
     }
   }
