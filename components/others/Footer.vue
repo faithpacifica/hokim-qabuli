@@ -33,7 +33,7 @@
           <li>
             <nuxt-link
               class="mont font-semibold text-[14px] leading-[18px] transition hover:opacity-80 active:opacity-60"
-              to="/static"
+              :to="localePath('/static')"
             >
                {{ $t('footer.link_three')}} 
             </nuxt-link>
