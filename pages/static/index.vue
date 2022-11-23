@@ -11,7 +11,7 @@
   <div class="container">
     <div class="static-section my-[32px] bg-white rounded-[16px]">
       <div class="wrapper max-w-[778px] w-full mx-auto pt-[33px] pb-[40px]">
-        <nuxt-link to="/" class="mx-auto block">
+        <nuxt-link to="/" class="block mx-auto">
           <Icon class=" blue-logo block max-w-[211px] w-full h-[33px] text-center mb-[32px] mx-auto" name="blue_logo" />
         </nuxt-link>
 
@@ -43,7 +43,6 @@
             </div>
           </button>
         </div>
-
       </div>
     </div>
   </div>
