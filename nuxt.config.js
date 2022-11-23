@@ -1,10 +1,10 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   server: {
-    port: 3000, // default: 3005
-    host: '0.0.0.0', // default: localhost
+    port: 3005, // default: 3005
+    host: 'localhost', // default: localhost
   },
-  ssr: false,
+  ssr: true,
   head: {
     title: 'Hokim qabuli',
     htmlAttrs: {
