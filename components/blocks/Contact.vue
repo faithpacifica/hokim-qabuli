@@ -43,7 +43,7 @@
             </div>
           </div>
           <div class="col-span-8">
-            <div class="input-wrapper relative">
+            <div class="relative input-wrapper">
               <label class="mb-[10px] inline-block mont font-semibold text-[14px] leading-[18px] text-[#111111]"
                 > {{ $t('contact.comment_label') }}
               </label>
@@ -119,7 +119,7 @@ export default {
   },
   computed: {
     isDisable() {
-      if (this.form.comment?.length > 100) {
+      if (this.form?.comment?.length > 100) {
         return this.disabled = false
       }
     },
@@ -127,7 +127,7 @@ export default {
   methods: {
     countWords() {
       if (this.form.comment) {
-        this.totalWords = this.form.comment.split('').length
+        this.totalWords = this.form?.comment.split('').length
       } else {
         this.totalWords = 0
       }

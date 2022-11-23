@@ -4,7 +4,7 @@ export default {
     port: 3005, // default: 3005
     host: 'localhost', // default: localhost
   },
-  ssr: true,
+  ssr: false,
   head: {
     title: 'Hokim qabuli',
     htmlAttrs: {
